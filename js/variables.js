@@ -8,4 +8,13 @@ export default {
     formResults: document.querySelector('.form__results'),
     rateConversion: document.querySelector('.rate__conversion'),
     rateLast: document.querySelector('.rate__last'),
+    switchButton: document.querySelector('.switch__currencies'),
+    toSelect: document.getElementById('to'),
+    fromSelect: document.getElementById('from'),
+    tabs: document.querySelectorAll('.converter__tab'),
+    currentCurrentcy: document.querySelector('.currency__single-item'),
+    currentCurrencyList: document.querySelector('.currency__list'),
+    singleSelect: document.getElementById('singleSelect'),
+    addBtn: document.querySelector('.currency__add-btn'),
+    addCurrencySelect: document.getElementById('addCurrencySelect'),
 }

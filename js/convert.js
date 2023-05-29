@@ -3,7 +3,7 @@ import state from "./state.js";
 import { convertTime, formatToCurrency, getFullTitle } from "./utils.js";
 import variables from "./variables.js";
 
-const { success, formResults, resulFrom, resulTo, rateConversion, rateLast } = variables;
+const { success, formResults, resulFrom, resulTo, rateConversion, rateLast, toSelect, fromSelect } = variables;
 
 export const handleChange = ({target: {value, name}}) => {
     state.pair = {
@@ -72,4 +72,18 @@ export const handleSubmit = async (e) => {
     } catch (error) {
         console.log(error);
     }
+}
+
+export const switchCurrency = () => {
+    const {pair: {to, from} } = state;
+
+    if(!to || !from) return;
+
+    state.pair = {
+        to: from,
+        from: to
+    }
+
+    toSelect.value = from;
+    fromSelect.value = to;
 }
